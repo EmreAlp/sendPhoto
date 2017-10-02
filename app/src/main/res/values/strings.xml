@@ -1,0 +1,222 @@
+<resources>
+    <string name="app_name">Bizim Tarifler</string>
+
+    <!--Base strings-->
+
+    <string name="loading_default">Bekleyiniz…</string>
+    <string name="error_no_connection">Please check your internet connection and try again</string>
+    <string name="dialog_error_title">Hata</string>
+    <string name="dialog_error_ok">Tamam</string>
+    <string name="facebook_app_id">1236765123098424</string>
+    <string name="facebook_profile_picture_size_tag"><![CDATA[/picture?type=large&redirect=true&width=200&height=200]]></string>
+    <string name="facebook_profile_picture_size_small_tag"><![CDATA[/picture?type=large&redirect=true&width=200&height=200]]></string>
+    <string name="facebook_base_graph">http://graph.facebook.com/</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\n Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\n Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="lorem_ipsum_mid">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</string>
+    <string name="faq_sample">1. Lorem ipsum dolor sit amet?\n\nConsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\n2. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi?\n\nAliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n\nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="wrong_old_password">Password\'s wrong</string>
+    <string name="wrong_username_password">wrong username and passoword</string>
+    <string name="bookmark_exists">exist bookmark</string>
+    <string name="error_unknown">unkown error</string>
+    <string name="missing_parameter">missing parameter</string>
+    <string name="must_login">must login</string>
+    <string name="user_create_error">user create error</string>
+    <string name="search">search</string>
+    <string name="about_instructor">egitmen hakkinda</string>
+
+    <!--FaceBook Widget-->
+    <string name="title_activity_comments">Comments</string>
+    <string name="action_comment">Comment</string>
+    <string name="action_refresh">Reload</string>
+
+
+    <!--IntroStrings-->
+    <string name="intro_activity_title">Bizim Tarifler</string>
+    <string name="login_sign_up_header">Üye ol veya Giriş Yap</string>
+    <string name="login_sign_up_welcome">Bizim Tarifler\'e Hoş geldiniz.</string>
+    <string name="login_sign_up_title_name">İsim</string>
+    <string name="login_sign_up_title_name_hint">İsmini yaz</string>
+    <string name="login_sign_up_title_mail">E-Posta</string>
+    <string name="login_sign_up_title_mail_hint">E-Posta adresini yaz</string>
+    <string name="login_sign_up_title_password">Şifre</string>
+    <string name="login_sign_up_title_password_hint">Şifreni yaz</string>
+    <string name="sign_up_with_facebook">Facebook hesabınız ile üye olun.</string>
+    <string name="sign_up_with_google">Google hesabınız ile üye olun.</string>
+    <string name="sign_up_with_email">E-posta adresiniz ile üye olun.</string>
+    <string name="user_agreement_text">Kullanıcı sözleşmesini kabul ediyorum</string>
+    <string name="login">GİRİŞ YAP</string>
+    <string name="sign_up">ÜYE OL</string>
+    <string name="not_member">Henüz üye değil misiniz?</string>
+    <string name="sign_up_here">Buradan üye olun</string>
+    <string name="already_member">Zaten üye misiniz?</string>
+    <string name="login_here">Üye Girişi</string>
+    <string name="guest_login">Kaydolmadan devam edin</string>
+
+    <!--Login & Sign Up errors-->
+    <string name="user_does_not_exist">Böyle bir kullanıcı bulunmuyor.</string>
+    <string name="error_email">Lütfen geçerli bir e-posta adresi giriniz.</string>
+    <string name="error_password">Şifreniz en az 7 karakterden oluşmalıdır.</string>
+    <string name="user_login_error">Hatalı \'e-posta\' veya \'şifre\'</string>
+    <string name="error_name">İsim alanı boş geçilemez. Bu yüzden profiliniz güncellenemedi.</string>
+    <string name="error_user_agreement">Kullanıcı sözleşmesini okuduğunuzu onaylamanız gerekiyor.</string>
+
+
+    <!--Bottombar strings-->
+    <string name="tab_text_recipes">Tarifler</string>
+    <string name="tab_text_my_recipe_book">Tarif Defterim</string>
+    <string name="tab_text_my_helpers">Yardımcılarım</string>
+    <string name="tab_text_tips">Püf Noktası</string>
+    <string name="tab_text_profile">Profilim</string>
+
+    <!--Toolbar string-->
+    <string name="search_toolbar_hint">Tarif veya menü arayın.</string>
+
+    <!--TabLayout String-->
+    <string name="tab_title_popular">POPÜLER</string>
+    <string name="tab_title_recipes">TARİFLER</string>
+    <string name="tab_title_menus">MENÜLER</string>
+    <string name="tab_title_my_recipes">Gönderilen</string>
+    <string name="tab_title_converter">Birim Çevirici</string>
+    <string name="tab_title_materials">Malzemeler</string>
+
+
+    <!--pager sample items-->
+    <string name="pager_recipes_row_header_sample_types">Hamur iş, geleneksel çay saati</string>
+    <string name="pager_recipes_row_header_sample_title">Peynirli Boşnak Böreği</string>
+    <string name="pager_recipes_row_header_sample_difficulty">Orta Zorluk</string>
+    <string name="adapter_tips_item_sample_text">Sandviçleri Taze Tutmanın Püf Noktası</string>
+
+
+    <!--Spinner sample text-->
+    <string name="spinner_filter_row_sample_text">Alfabetik</string>
+
+
+    <!--Category Spinner filter items -->
+    <string-array name="category_spinner_filter_items">
+        <item>Alfabetik (A-Z)</item>
+        <item>En Yeniler</item>
+    </string-array>
+
+    <!--Add Note Activity Strings-->
+    <string name="add_note_descripton">Tarifleri pişirirken yaptığınız değişiklikleri kaydedebilirsiniz. Eklediğiniz notları sadece siz görebileceksiniz</string>
+    <string name="add_note_note_title">Notunuz</string>
+    <string name="add_note_hint"> Notunuzu tamamladığınızda, aşağıdaki Kaydet butonuna basarak kaydedebilirsiniz.</string>
+    <string name="add_note_txt_save">Kaydet</string>
+
+
+    <!--Add Recipe Activity Strings-->
+    <string name="add_recipe_hint">Tarifinizi ve malzemeleri bu alana girin.</string>
+    <string name="add_recipe_txt_add_image">Resim\nEkle</string>
+    <string name="add_recipe_send">Tarif Gönder</string>
+    <string name="content_add_recipe_txt_title">Başlık</string>
+    <string name="content_add_recipe_txt_recipe">Tarif</string>
+
+
+    <string name="pick_image_intent_text">Fotoğraf seçin</string>
+    <string name="youtube_api_key">AIzaSyA6lfla9skqBBvzgHOZBPag4MvvQnstwkI</string>
+
+    <!--Fragment Popular Recipes strings-->
+    <string name="adapter_recipes_row_button_text_today">Günün Menüsü</string>
+    <string name="adapter_recipes_row_button_text_send">Tarif Yollayın Yayınlayalım!</string>
+    <string name="adapter_recipes_text_new">Yeni</string>
+    <string name="adapter_recipe_left_card_sample_recipe_name">Tulum Peynir</string>
+    <string name="adapter_recipe_left_card_sample_recipe_type">Hamur işi</string>
+    <string name="adapter_recipe_left_card_sample_recipe_leve">Orta Zorluk</string>
+
+    <!--Toolbar classic titles-->
+    <string name="toolbar_classic_add_note_title">Not Ekle</string>
+    <string name="toolbar_classic_add_note_title_daily_recipe">Bugün Ne Pişirsem</string>
+    <string name="toolbar_classic_comment_text">Yorumlar</string>
+    <string name="toolbar_classic_favourite_text">Kaydet</string>
+    <string name="toolbar_classic_share_text">Paylaş</string>
+
+    <!--Fragment Profile strings-->
+
+    <string name="adapter_profile_row_header_tv_sample">Ayşe Muşkara</string>
+    <string name="adapter_profile_row_header_tv_mail_sample">ayse@senfoni.co</string>
+    <string name="fragment_profile_card_name_sample">Tarif Defterim</string>
+    <string name="fragment_profile_card_desc_sample">Kaydettiğiniz veya paylaştığınız tarifleri Tarif Defterinizde bulabilirsiniz.</string>
+    <string name="adapter_detail_row_recipe_user_name_sample">Tarifiniz Eklendi</string>
+    <string name="adapter_detail_row_recipe_user_desc_sample">Bize göndermiş olduğunuz “Peynirli Börek” tarifiniz yayında!</string>
+    <string name="adapter_detail_row_recipe_user_show_sample">TARİFİ GÖRÜNTÜLE</string>
+    <string name="adapter_detail_row_recipe_user_erase_sample">UYARIYI SİL</string>
+    <string name="fragment_profile_card_save_sample">KAYDETTİKLERİM</string>
+    <string name="fragment_profile_card_share_sample">PAYLAŞTIKLARIM</string>
+
+    <!--Settings Activity strings-->
+
+    <string name="activity_settings_general_settings_sample">Genel Ayarlar</string>
+    <string name="activity_settings_change_profile_tv_sample">Profil Düzenle</string>
+    <string name="activity_settings_profile_picture_detail_sample">Kullanıcı profil resminizi değiştirebilirsiniz.</string>
+    <string name="activity_settings_change_password_sample">Şifre Değiştir</string>
+    <string name="activity_settings_profile_password_detail_sample">Bizim Tarifler uygulaması şifrenizi değiştirebilirsiniz.</string>
+    <string name="activity_settings_general_notification_sample">Bildirim Ayarları</string>
+    <string name="activity_settings_general_other_tv">Diğer</string>
+    <string name="mail_notification_tv">E-posta bildirimleri</string>
+    <string name="push_notification_tv">Push-notification bildirimleri</string>
+    <string name="activity_settings_share_button_tv">Uygulamayı Paylaş</string>
+    <string name="activity_settings_sss_button_tv">Sıkça Sorulan Sorular</string>
+    <string name="activity_settings_contract_button_tv">Üyelik Sözleşmesi</string>
+    <string name="activity_settings_about_button_tv">Hakkında</string>
+    <string name="activity_settings_exit_button_tv">Çıkış</string>
+    <string name="guest_token">eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjAsImlhdCI6MTQ4ODMyNzc4OCwiZXhwIjozMDY2MTY0NTg4fQ.JGS4bzwihWhQbrMzFWfJOYqx7MfxvdbPbfKL809ljdU</string>
+    <string name="tab_my_rb_sent_tv">Sevdiğiniz tarifleri aşağıdaki Yeni Tarif Ekle butonuna basarak ekleyip bize gönderin, biz de sizin tarifinize sitemizde yer verelim.</string>
+
+    <!--Recipe Detail Strings-->
+
+    <string name="activity_recipe_detail_bottom_step_text">Pişirmeye başla</string>
+    <string name="activity_recipe_detail_bottom_text_voice_and_hand">Ses Komutları ve El Hareketleri İle</string>
+    <string name="activity_recipe_detail_intro_text">Adım Adım Pişirelim düğmesine basarak yemek pişirirken tarif adımlarını ses komutları ve el hareketleriyle ekranınıza hiç dokunmadan kontrol edebilirsiniz!</string>
+    <string name="activity_recipe_detail_fav_toast">Favorilerinize eklendi!</string>
+    <string name="detail_search">Detaylı Filtre</string>
+    <string name="tab_my_helpers_converter_title">Seçeceğiniz malzemeyi geleneksel ya da modern ölçülere çevirebilirsiniz.</string>
+    <string name="tab_my_helpers_converter_sample_convert_left">GRAM</string>
+    <string name="tab_my_helpers_converter_sample_convert_left_value">600</string>
+    <string name="tab_my_helpers_converter_sample_convert_right">SU BARDAĞI</string>
+    <string name="tab_my_helpers_converter_sample_convert_right_value">5/6</string>
+
+    <!--Tab Converter Strings-->
+
+    <!--Change Password Activity-->
+    <string name="change_password_hint_old_password">Mevcut Şifre</string>
+    <string name="change_password_text_forgot_password">Şifremi unuttum</string>
+    <string name="change_password_hint_new_password">Yeni şifre</string>
+    <string name="change_password_hint_new_password_again">Yeni şifre tekrar</string>
+    <string name="change_password_text_save">Kaydet</string>
+    <string name="change_password_text_cancel">Vazgeç</string>
+    <string name="change_password_toolbar_title">Şifre Değiştir</string>
+
+    <!--Edit Profile Activity-->
+    <string name="edit_profile_text_edit">Düzenle</string>
+    <string name="edit_profile_hint_name">İsim</string>
+    <string name="edit_profile_hint_mail">Mail</string>
+    <string name="edit_profile_text_gender">Cinsiyet</string>
+    <string name="edit_profile_toolbar_title">Profil Düzenle</string>
+    <string name="edit_profile_gender_male">Erkek</string>
+    <string name="edit_profile_gender_female">Kadın</string>
+    <string name="edit_profile_title_select_gender">Cinsiyetinizi seçin</string>
+    <string name="faq_toolbar_title">Sıkça Sorulan Sorular</string>
+    <string name="err_audio_permission">Ses için izin reddedildi.</string>
+
+
+    <!--Forgot Password Activity-->
+    <string name="content_forgot_password_desc">Size şifrenizi sıfırlamanız için gerekli bilgileri yollamamız için Bizim Tarifler hesabınızı oluştururken kullandığınız
+e-posta adresinizi girin.</string>
+
+    <!--OnBoarding Activity-->
+    <string name="on_boarding_desc_1">Hepsi şeflerimiz tarafından tek tek denenmiş binlerce tarifi inceleyin!</string>
+    <string name="on_boarding_desc_2">En sevdiğiniz tarifleri püf noktalarıyla beraber adım adım hazırlayın.</string>
+    <string name="on_boarding_desc_3">Binlerce tarifi videolarıyla izleyin!</string>
+    <string name="on_boarding_desc_4">Tarifinizi hazırlarken, telefon ekranına hiç dokunmadan ihtiyacınız olan bilgiye ulaşın.</string>
+    <string name="on_boarding_desc_5">Sizler için hazırladığımız günlük menüler sayesinde, ‘Akşama Ne Pişirsem?’ diye düşünmeyin.</string>
+    <string name="on_boarding_title_1">100%\nDenenmiş Tarifler</string>
+    <string name="on_boarding_title_2">Adım Adım\nTarifler</string>
+    <string name="on_boarding_title_3">Videolu \nTarifler</string>
+    <string name="on_boarding_title_4">Elle ve Sesli\nKomutlar</string>
+    <string name="on_boarding_title_5">Bugün\nne Pişirsem</string>
+    <string name="ayarlar">Ayarlar</string>
+    <string name="guest_profile_title">Hesabım</string>
+    <string name="guest_direction_text">Beğendiğiniz tarifleri kaydedebilmek ve kendi tariflerinizi paylaşılabilmek için Bizim Tarifler’e üye olun!</string>
+
+
+</resources>
