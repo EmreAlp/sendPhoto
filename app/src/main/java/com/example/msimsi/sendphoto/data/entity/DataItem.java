@@ -2,6 +2,11 @@ package com.example.msimsi.sendphoto.data.entity;
 
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * Created by MSIMSI on 1.10.2017.
+ * All rights reserved.
+ */
+
 public class DataItem {
 
 	@SerializedName("x-amz-date")

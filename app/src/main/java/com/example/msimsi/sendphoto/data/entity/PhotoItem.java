@@ -4,14 +4,19 @@ import com.google.gson.annotations.SerializedName;
 
 public class PhotoItem {
 
-    @SerializedName("name")
-    private String name;
+    /**
+     * Created by MSIMSI on 1.10.2017.
+     * All rights reserved.
+     */
 
     @SerializedName("location")
     private String location;
 
     @SerializedName("url")
     private String url;
+
+    @SerializedName("name")
+    private String name;
 
     public void setName(String name) {
         this.name = name;

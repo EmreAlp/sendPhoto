@@ -4,6 +4,11 @@ import com.google.gson.annotations.SerializedName;
 
 public class ResourceItem {
 
+	/**
+	 * Created by MSIMSI on 1.10.2017.
+	 * All rights reserved.
+	 */
+
 	@SerializedName("content_type")
 	private String contentType;
 
