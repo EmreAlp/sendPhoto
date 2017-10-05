@@ -8,18 +8,16 @@ import android.util.Log;
 
 import com.example.msimsi.sendphoto.RetrofitSingleton;
 import com.example.msimsi.sendphoto.SendPhotoApi;
-import com.example.msimsi.sendphoto.data.entity.PreSignedPostItem;
+import com.example.msimsi.sendphoto.data.entity.UploadPhotoItem;
 import com.example.msimsi.sendphoto.data.response.PhotoResponse;
-import com.example.msimsi.sendphoto.data.response.PreSignedUrlResponse;
+import com.example.msimsi.sendphoto.data.response.UploadResponse;
 import com.example.msimsi.sendphoto.utility.GPSTracker;
 
 import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
-import java.util.Map;
 
 import okhttp3.MultipartBody;
-import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -33,17 +31,21 @@ import retrofit2.Response;
 class MainPresenter implements MainContract.presenter {
 
     private final MainContract.View view;
+
     private SendPhotoApi api;
+    private SendPhotoApi api2;
 
     MainPresenter(MainContract.View view) {
 
         this.view = view;
-        api = RetrofitSingleton.getInstance();
+
+        api = RetrofitSingleton.getInstance(RetrofitSingleton.BASE_URL);
+        api2 = RetrofitSingleton.getInstance(RetrofitSingleton.BASE_URL2);
     }
 
     @Override
     public void onUploadPhotoClicked() {
-        view.sendResource();
+        view.sendFile();
     }
 
     @Override
@@ -55,27 +57,6 @@ class MainPresenter implements MainContract.presenter {
     public void showWarning() {
         view.showToast();
     }
-
-    @Override
-    public void getPreSignedUrl(PreSignedPostItem preSignedPostItem) {
-
-        Call<PreSignedUrlResponse> call = api.getPreSignedUrl(preSignedPostItem);
-
-        call.enqueue(new Callback<PreSignedUrlResponse>() {
-            @Override
-            public void onResponse(Call<PreSignedUrlResponse> call, Response<PreSignedUrlResponse> response) {
-
-                Log.v("Success", "Fetched Pre Signed Url Headers");
-                view.sendPostParameters(response);
-            }
-
-            @Override
-            public void onFailure(Call<PreSignedUrlResponse> call, Throwable t) {
-
-                Log.e("Failure", t.toString());
-            }
-        });
-    } // Get Necessary Headers for Post Photo
 
     @Override
     public void fetchLocationInfo(Activity activity) {
@@ -116,18 +97,21 @@ class MainPresenter implements MainContract.presenter {
     }  // Location and City Provider
 
     @Override
-    public void postPhoto(Map<String, String> map, RequestBody requestBody, MultipartBody.Part body) {
+    public void postPhoto(UploadPhotoItem uploadPhotoItem) {
 
-        Call<PhotoResponse> call = api.uploadImage(map, requestBody, body);
+        Call<PhotoResponse> call = api.uploadImage(uploadPhotoItem);
 
         call.enqueue(new Callback<PhotoResponse>() {
             @Override
             public void onResponse(Call<PhotoResponse> call,
                                    Response<PhotoResponse> response) {
 
-                if (response.body() == null) {
-                    Log.e("Error", "There is a response but the body is empty");
-                }
+                Log.e("id", String.valueOf(response.body().getId()));
+                Log.e("name", response.body().getName());
+                Log.e("location", response.body().getLocation());
+                Log.e("url", response.body().getUrl());
+                Log.e("cratedAt", response.body().getCreatedAt());
+                Log.e("updatedAt", response.body().getUpdatedAt());
             }
 
             @Override
@@ -137,4 +121,30 @@ class MainPresenter implements MainContract.presenter {
             }
         });
     }  // Call for Upload Image to Amazon S3 Server
+
+    @Override
+    public void postPhotoToUploadsIm(MultipartBody.Part body) {
+
+        Call<UploadResponse> call = api2.getFileUrlFromServer(body);
+
+        call.enqueue(new Callback<UploadResponse>() {
+            @Override
+            public void onResponse(Call<UploadResponse> call, Response<UploadResponse> response) {
+
+                if (response.body() != null && response.body().getStatusCode() == 200) {
+                    view.sendRequestBody(response.body().getData().getImgUrl());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<UploadResponse> call, Throwable t) {
+
+            }
+        });
+
+    }
+
+    public void onUploadImageClicked() {
+        view.sendFile();
+    }
 }

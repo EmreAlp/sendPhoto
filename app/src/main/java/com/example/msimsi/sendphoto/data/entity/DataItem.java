@@ -2,137 +2,180 @@ package com.example.msimsi.sendphoto.data.entity;
 
 import com.google.gson.annotations.SerializedName;
 
-/**
- * Created by MSIMSI on 1.10.2017.
- * All rights reserved.
- */
-
 public class DataItem {
 
-	@SerializedName("x-amz-date")
-	private String xAmzDate;
+	@SerializedName("thumb_url")
+	private String thumbUrl;
 
-	@SerializedName("success_action_status")
-	private String successActionStatus;
+	@SerializedName("img_bytes")
+	private int imgBytes;
 
-	@SerializedName("x-amz-signature")
-	private String xAmzSignature;
+	@SerializedName("img_attr")
+	private String imgAttr;
 
-	@SerializedName("acl")
-	private String acl;
+	@SerializedName("img_width")
+	private String imgWidth;
 
-	@SerializedName("key")
-	private String key;
+	@SerializedName("thumb_width")
+	private int thumbWidth;
 
-	@SerializedName("x-amz-algorithm")
-	private String xAmzAlgorithm;
+	@SerializedName("img_height")
+	private String imgHeight;
 
-	@SerializedName("url")
-	private String url;
+	@SerializedName("thumb_height")
+	private int thumbHeight;
 
-	@SerializedName("Content-Type")
-	private String contentType;
+	@SerializedName("img_size")
+	private String imgSize;
 
-	@SerializedName("policy")
-	private String policy;
+	@SerializedName("source")
+	private String source;
 
-	@SerializedName("x-amz-credential")
-	private String xAmzCredential;
+	@SerializedName("img_name")
+	private String imgName;
 
-	public void setXAmzDate(String xAmzDate){
-		this.xAmzDate = xAmzDate;
+	@SerializedName("img_url")
+	private String imgUrl;
+
+	@SerializedName("resized")
+	private String resized;
+
+	@SerializedName("img_view")
+	private String imgView;
+
+	@SerializedName("delete_key")
+	private String deleteKey;
+
+	public void setThumbUrl(String thumbUrl){
+		this.thumbUrl = thumbUrl;
 	}
 
-	public String getXAmzDate(){
-		return xAmzDate;
+	public String getThumbUrl(){
+		return thumbUrl;
 	}
 
-	public void setSuccessActionStatus(String successActionStatus){
-		this.successActionStatus = successActionStatus;
+	public void setImgBytes(int imgBytes){
+		this.imgBytes = imgBytes;
 	}
 
-	public String getSuccessActionStatus(){
-		return successActionStatus;
+	public int getImgBytes(){
+		return imgBytes;
 	}
 
-	public void setXAmzSignature(String xAmzSignature){
-		this.xAmzSignature = xAmzSignature;
+	public void setImgAttr(String imgAttr){
+		this.imgAttr = imgAttr;
 	}
 
-	public String getXAmzSignature(){
-		return xAmzSignature;
+	public String getImgAttr(){
+		return imgAttr;
 	}
 
-	public void setAcl(String acl){
-		this.acl = acl;
+	public void setImgWidth(String imgWidth){
+		this.imgWidth = imgWidth;
 	}
 
-	public String getAcl(){
-		return acl;
+	public String getImgWidth(){
+		return imgWidth;
 	}
 
-	public void setKey(String key){
-		this.key = key;
+	public void setThumbWidth(int thumbWidth){
+		this.thumbWidth = thumbWidth;
 	}
 
-	public String getKey(){
-		return key;
+	public int getThumbWidth(){
+		return thumbWidth;
 	}
 
-	public void setXAmzAlgorithm(String xAmzAlgorithm){
-		this.xAmzAlgorithm = xAmzAlgorithm;
+	public void setImgHeight(String imgHeight){
+		this.imgHeight = imgHeight;
 	}
 
-	public String getXAmzAlgorithm(){
-		return xAmzAlgorithm;
+	public String getImgHeight(){
+		return imgHeight;
 	}
 
-	public void setUrl(String url){
-		this.url = url;
+	public void setThumbHeight(int thumbHeight){
+		this.thumbHeight = thumbHeight;
 	}
 
-	public String getUrl(){
-		return url;
+	public int getThumbHeight(){
+		return thumbHeight;
 	}
 
-	public void setContentType(String contentType){
-		this.contentType = contentType;
+	public void setImgSize(String imgSize){
+		this.imgSize = imgSize;
 	}
 
-	public String getContentType(){
-		return contentType;
+	public String getImgSize(){
+		return imgSize;
 	}
 
-	public void setPolicy(String policy){
-		this.policy = policy;
+	public void setSource(String source){
+		this.source = source;
 	}
 
-	public String getPolicy(){
-		return policy;
+	public String getSource(){
+		return source;
 	}
 
-	public void setXAmzCredential(String xAmzCredential){
-		this.xAmzCredential = xAmzCredential;
+	public void setImgName(String imgName){
+		this.imgName = imgName;
 	}
 
-	public String getXAmzCredential(){
-		return xAmzCredential;
+	public String getImgName(){
+		return imgName;
+	}
+
+	public void setImgUrl(String imgUrl){
+		this.imgUrl = imgUrl;
+	}
+
+	public String getImgUrl(){
+		return imgUrl;
+	}
+
+	public void setResized(String resized){
+		this.resized = resized;
+	}
+
+	public String getResized(){
+		return resized;
+	}
+
+	public void setImgView(String imgView){
+		this.imgView = imgView;
+	}
+
+	public String getImgView(){
+		return imgView;
+	}
+
+	public void setDeleteKey(String deleteKey){
+		this.deleteKey = deleteKey;
+	}
+
+	public String getDeleteKey(){
+		return deleteKey;
 	}
 
 	@Override
- 	public String toString(){
-		return 
-			"DataItem{" +
-			"x-amz-date = '" + xAmzDate + '\'' + 
-			",success_action_status = '" + successActionStatus + '\'' + 
-			",x-amz-signature = '" + xAmzSignature + '\'' + 
-			",acl = '" + acl + '\'' + 
-			",key = '" + key + '\'' + 
-			",x-amz-algorithm = '" + xAmzAlgorithm + '\'' + 
-			",url = '" + url + '\'' + 
-			",content-Type = '" + contentType + '\'' + 
-			",policy = '" + policy + '\'' + 
-			",x-amz-credential = '" + xAmzCredential + '\'' + 
-			"}";
-		}
+	public String toString() {
+
+		return "DataItem{" +
+				"thumbUrl='" + thumbUrl + '\'' +
+				", imgBytes=" + imgBytes +
+				", imgAttr='" + imgAttr + '\'' +
+				", imgWidth='" + imgWidth + '\'' +
+				", thumbWidth=" + thumbWidth +
+				", imgHeight='" + imgHeight + '\'' +
+				", thumbHeight=" + thumbHeight +
+				", imgSize='" + imgSize + '\'' +
+				", source='" + source + '\'' +
+				", imgName='" + imgName + '\'' +
+				", imgUrl='" + imgUrl + '\'' +
+				", resized='" + resized + '\'' +
+				", imgView='" + imgView + '\'' +
+				", deleteKey='" + deleteKey + '\'' +
+				'}';
+	}
 }
