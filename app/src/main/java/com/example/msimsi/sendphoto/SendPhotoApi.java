@@ -22,7 +22,7 @@ public interface SendPhotoApi {
 //    Call<PhotoResponse> getPhotos(); // No need to use this Call !
 
     @POST("/photos")
-    Call<PhotoResponse> uploadImage(@Body UploadPhotoItem uploadPhotoItem); // Multi-part Upload Call (Not Sure !)
+    Call<PhotoResponse> uploadImage(@Body UploadPhotoItem uploadPhotoItem);
 
     @Multipart
     @POST("/api")

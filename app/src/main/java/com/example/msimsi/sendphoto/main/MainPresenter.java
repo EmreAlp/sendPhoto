@@ -138,13 +138,9 @@ class MainPresenter implements MainContract.presenter {
 
             @Override
             public void onFailure(Call<UploadResponse> call, Throwable t) {
-
+                Log.e("Upload error:", t.getMessage());
             }
         });
 
-    }
-
-    public void onUploadImageClicked() {
-        view.sendFile();
     }
 }

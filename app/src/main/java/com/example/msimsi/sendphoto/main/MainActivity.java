@@ -1,10 +1,12 @@
 package com.example.msimsi.sendphoto.main;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -46,9 +48,7 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
     private Uri uri;
 
     private final int REQUEST_GALLERY_CODE = 200;
-    private final int TAG_PERMISSION_CODE = 1;
-
-    private final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
+    private String[] PERMISSIONS = {Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.READ_EXTERNAL_STORAGE};
 
     private double userLatitude;
     private double userLongitude;
@@ -64,15 +64,16 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
 
         mainPresenter = new MainPresenter(this); // Create Instance of MainPresenter
 
-        if (!CheckPermission.checkPermission(MainActivity.this)) {
-            CheckPermission.requestPermission(MainActivity.this, TAG_PERMISSION_CODE);
+        int PERMISSION_ALL = 1;
+
+        if (!CheckPermission.hasPermissions(this, PERMISSIONS)) {
+            ActivityCompat.requestPermissions(this, PERMISSIONS, PERMISSION_ALL);
         }
 
         sendPhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (uri != null) {
-//                    mainPresenter.onUploadPhotoClicked();
                     mainPresenter.onUploadPhotoClicked();
                 } else {
                     mainPresenter.showWarning();

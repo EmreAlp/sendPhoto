@@ -1,10 +1,9 @@
 package com.example.msimsi.sendphoto.utility;
 
-import android.Manifest;
-import android.app.Activity;
+import android.content.Context;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 
 /**
  * Created by MSIMSI on 3.10.2017.
@@ -13,24 +12,14 @@ import android.support.v4.content.ContextCompat;
 
 public class CheckPermission {
 
-    //  CHECK FOR LOCATION PERMISSION
-    public static boolean checkPermission(Activity activity) {
-        int result = ContextCompat.checkSelfPermission(activity, Manifest.permission.ACCESS_FINE_LOCATION);
-        if (result == PackageManager.PERMISSION_GRANTED) {
-
-            return true;
-
-        } else {
-
-            return false;
-
+    public static boolean hasPermissions(Context context, String... permissions) {
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && context != null && permissions != null) {
+            for (String permission : permissions) {
+                if (ActivityCompat.checkSelfPermission(context, permission) != PackageManager.PERMISSION_GRANTED) {
+                    return false;
+                }
+            }
         }
+        return true;
     }
-
-    //REQUEST FOR PERMISSSION
-    public static void requestPermission(Activity activity, final int code) {
-
-            ActivityCompat.requestPermissions(activity, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, code);
-    }
-
 }
